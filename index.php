@@ -34,7 +34,7 @@ header("Access-Control-Allow-Headers: X-Requested-With");
             <p style="text-align:center">Choose your new username well, it's the only time you'll be able to change it.</p>
         </div>
     </popup>
-    <script src="http://localhost/chat-room/js/index.js?a"></script>
+    <script src="http://localhost/chat-room/js/index.js?b"></script>
 </body>
 
 </html>

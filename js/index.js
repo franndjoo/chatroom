@@ -59,7 +59,7 @@ document.getElementById("message-editor__sender").onclick = function (ev) {
   document.getElementById("message-editor__texter").value = "";
   // sends the input to the database if there is no corrupted data in there
   fetch(
-    "http://192.168.1.35/chat-room/handlers/new-message.php?msg=" +
+    "http://localhost/chat-room/handlers/new-message.php?msg=" +
       btoa(inputData) +
       "&frm=" +
       btoa(customID)
@@ -70,7 +70,7 @@ document.getElementById("message-editor__sender").onclick = function (ev) {
 // by rendering them on the page
 let loadedMessagesNumber = 0;
 setInterval(() => {
-  fetch("http://192.168.1.35/chat-room/handlers/get-messages.php").then(
+  fetch("http://localhost/chat-room/handlers/get-messages.php").then(
     async (res) => {
       // parse the data returned by this query to use it later.
       // the data is expected to be formatted as [str, str][]
