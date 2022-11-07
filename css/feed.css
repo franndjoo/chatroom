@@ -1,0 +1,31 @@
+main {
+    margin-top: 7vh;
+    height: calc(93vh - 8%);
+    display: grid;
+    grid-template-columns: 80% 20%;;
+    padding: 4%;
+}
+
+div#messages {
+    overflow-y: auto;
+    height: calc(93vh - 8%);
+}
+div#messages > * {
+    border-bottom: 1px solid gray;
+}
+div#messages > * > #sender__container {
+    color: gray;
+}
+
+div#message-editor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div#message-editor > * {
+    width: 90%;
+}
+
+* {
+    overflow: hidden;
+}

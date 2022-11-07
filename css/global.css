@@ -2,16 +2,17 @@
 
 * {
     --accent: rgb(0, 122, 255);
-    --container: rgb(232, 232, 233);
+    --container: rgb(241, 241, 241);
     --background: white;
 
     font-family: Inter;
     transition: all .2s ease;
+    /* overflow: hidden; */
 }
 
 body {
     background: var(--background);
-    height: 100vh;
+    max-height: 100vh;
     width: 100vw;
 
     margin: 0;
@@ -29,59 +30,10 @@ header {
     width: 100vw;
 }
 
-main {
-    top: 7vh;
-    position: absolute;
-    display: grid;
-    grid-template-rows: 92% 8%;
-    height: 92vh;
-    width: 100vw;
-}
-
-main > div#messages {
-    background: var(--container);
-    margin: 2%;
-    padding: 2%;
-    border-radius: 24px;
-    box-shadow: 0px 0px 30px -10px gray;
-    overflow: auto;
-}
-main > div#messages > * {
-    background: var(--background);
-    padding: 1%;
-    border-radius: 12px;
-    border: 1px solid gray;
-    margin-block: 0px;
-}
-main > div#messages > *.custom {
-    background: var(--accent);
-    padding: 1%;
-    border-radius: 12px;
-    color: white;
-}
-main > div#messages > *.sender__container {
-    background: transparent;
-    font-size: 16px;
-    color: gray;
-    padding: 0%;
-    border: none;
-    margin-block: 0px;
-    margin-bottom: 10px;
-}
-main > div#messages > *.sender__container.custom {
-    color: gray;
-}
-
-main > div#message-editor {
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-
 input {
-    width: 78%;
     font-size: 20px;
-    padding: 1%;
+    padding: 12px;
+    width: 30%;
     border: 1px solid gray;
     border-radius: 24px;
 }
@@ -94,50 +46,15 @@ input[type="text"]:focus {
 }
 
 input[type="submit"] {
-    width: 18%;
     margin-right: 2%;
     background-color: var(--accent);
     color: white;
-    opacity: .5;
     cursor: pointer;
-}
-input[type="submit"]:hover {
-    opacity: 1;
+    max-width: 250px;
 }
 
 h1 {
     font-weight: 800;
     text-transform: uppercase;
     margin-left: 2%;
-}
-
-popup {
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, .4);
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-*#popup > div {
-    width: 80vw;
-    max-width: 500px;
-    min-width: 100px;
-
-    height: 70vh;
-    max-height: 350px;
-    min-height: 200px;
-
-    background: var(--background);
-    border-radius: 24px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
 }
