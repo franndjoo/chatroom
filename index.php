@@ -10,8 +10,8 @@ header("Access-Control-Allow-Headers: X-Requested-With");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://localhost/chat-room/css/global.css" />
-    <link rel="stylesheet" href="http://localhost/chat-room/css/feed.css" />
+    <link rel="stylesheet" href="http://localhost/chat-room/css/global.css?a" />
+    <link rel="stylesheet" href="http://localhost/chat-room/css/feed.css?b" />
     <title>ChatRoom</title>
 </head>
 
@@ -26,7 +26,7 @@ header("Access-Control-Allow-Headers: X-Requested-With");
             <h2>Feed</h2>
         </div>
         <div id="message-editor">
-            <input type="text" value="" placeholder="Write your message here." id="message-editor__texter" />
+            <textarea rows="7" type="text" value="" placeholder="Write your message here." id="message-editor__texter"></textarea>
             <br />
             <input type="submit" value="Send" id="message-editor__sender" />
         </div>

@@ -22,6 +22,22 @@ div#message-editor {
     flex-direction: column;
     align-items: center;
 }
+textarea#message-editor__texter {
+    border: none;
+    border-radius: 0px;
+    width: 100%;
+    resize: none;
+    height: 50%;
+    background-color: var(--container);
+    border-radius: 12px;
+    padding: 2%;
+    font-size: 18px;
+}
+textarea#message-editor__texter:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px -8px gray;
+}
+
 div#message-editor > * {
     width: 90%;
 }
